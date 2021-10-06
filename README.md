@@ -10,24 +10,11 @@
 ! pip install --upgrade pandas-datareader
 ```
 
-## **Importação das bibliotecas**
-
-```py
-from math import ceil
-import numpy as np
-import pandas as pd
-import pandas_datareader as dados
-from sklearn.preprocessing import MinMaxScaler
-from keras.models import Sequential
-from keras.layers import Dense, LSTM
-import matplotlib.pyplot as plt
-# plt.style.use('fivethirtyeight')
-# plt.style.use('default')
-```
-
 ## **Obtenção dos dados**
 
 ```py
+import pandas_datareader as dados
+import pandas as pd
 
 ativo = "AMZN"  # https://finance.yahoo.com/
 
@@ -37,6 +24,10 @@ dados_do_ativo = dados.DataReader(ativo, start="2015-01-01",end="2021-08-24", da
 ## **Visualização dos dados**
 
 ```py
+import matplotlib.pyplot as plt
+# plt.style.use('fivethirtyeight')
+# plt.style.use('default')
+
 plt.figure(figsize=(16,8))
 plt.title('Histórico de fechamento ' + ativo)
 plt.plot(dados_do_ativo['Close'])
@@ -51,6 +42,7 @@ plt.show()
 cotacoes_df = dados_do_ativo.filter(['Close'])
 cotacoes = cotacoes_df.values
 
+from sklearn.preprocessing import MinMaxScaler
 
 normalizador = MinMaxScaler(feature_range=(0, 1)) 
 cotacoes_normalizadas = normalizador.fit_transform(cotacoes)
@@ -58,8 +50,10 @@ cotacoes_normalizadas = normalizador.fit_transform(cotacoes)
 
 ## **Separação dos dados para treinamento**
 ```py
+from math import ceil
+
 dias_treinamento = ceil( len(cotacoes) *.8) 
-cotacoes_treinamento = cotacoes_normalizadas[0:dias_treinamento  , : ]
+cotacoes_treinamento = cotacoes_normalizadas[0:dias_treinamento]
 
 x_treino=[]
 y_treino = []
@@ -67,6 +61,9 @@ y_treino = []
 for i in range(30,len(cotacoes_treinamento)):
     x_treino.append(cotacoes_treinamento[i-30:i])
     y_treino.append(cotacoes_treinamento[i])
+
+
+import numpy as np
 
 x_treino, y_treino = np.array(x_treino), np.array(y_treino)
 
@@ -76,6 +73,9 @@ x_treino = np.reshape(x_treino, (len(x_treino),30,1))
 ## **Criação do modelo**
 
 ```py
+from keras.models import Sequential
+from keras.layers import Dense, LSTM
+
 model = Sequential()
 
 model.add(LSTM(units=50, return_sequences=True,input_shape=(30,1)))
@@ -94,16 +94,16 @@ model.fit(x_treino, y_treino, batch_size=1, epochs=1)
 
 ## **Separação e preparação dos dados para o teste**
 ```py
-cotacoes_teste = cotacoes_normalizadas[dias_treinamento - 30: ]
+cotacoes_teste = cotacoes_normalizadas[dias_treinamento - 30:]
 
 x_teste = []
-y_teste =  cotacoes[dias_treinamento :  ] 
+y_teste =  cotacoes[dias_treinamento:] 
 for i in range(30,len(cotacoes_teste)):
     x_teste.append(cotacoes_teste[i-30:i])
 
 
 x_teste = np.array(x_teste)
-x_teste = np.reshape(x_teste, (x_teste.shape[0],x_teste.shape[1],1))
+x_teste = np.reshape(x_teste, (len(x_teste),30,1))
 ```
 
 ## **Teste (predição)**
@@ -117,7 +117,7 @@ predictions = normalizador.inverse_transform(predictions)
 ## **Cálculo do erro (diferença entre predição e valor real)**
 ```py
 rmse=np.sqrt(np.mean(((predictions- y_teste)**2)))
-print(rmse)
+rmse
 ```
 ## **Gráfico de comparação**
 
