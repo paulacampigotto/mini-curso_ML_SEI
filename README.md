@@ -162,7 +162,7 @@ prediction = model.predict(x)
 prediction = normalizador.inverse_transform(prediction)
 real = dados_do_ativo.filter(['Close']).values[-1]
 
-print('pedição: ',prediction)
+print('predição: ',prediction)
 print('real: ',real)
 ```
 
