@@ -1,5 +1,14 @@
 # **LSTM - Previsão de preços de ações**
 
+## Links que comentei nas reuniões
+
+- [Link para o vídeo do mini curso de ML](https://seniorsistemassa-my.sharepoint.com/:v:/g/personal/paula_campigotto_senior_com_br/EWLEPtH5scpHmpk8tZ-2S2sBtIPupqu0BC8aNSTTohhuxw?e=r1wWIU)
+- - [Artigos do CBIC sobre mercado financeiro](https://sbic.org.br/eventos/cbic_2021/#st04)
+- - [Recomendação de curso sobre ML](https://www.coursera.org/learn/machine-learning/)
+- - [Recomendação de livro sobre ML](https://www.amazon.com.br/M%C3%A3os-Obra-Aprendizado-Scikit-Learn-Inteligentes/dp/8550815489/ref=asc_df_8550815489/?tag=googleshopp00-20&linkCode=df0&hvadid=379715964603&hvpos=&hvnetw=g&hvrand=17329341288120638174&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9102333&hvtargid=pla-1390910077420&psc=1)
+
+- [Link para o vídeo da apresentação da AWS](https://seniorsistemassa-my.sharepoint.com/:v:/g/personal/paula_campigotto_senior_com_br/EWLEPtH5scpHmpk8tZ-2S2sBtIPupqu0BC8aNSTTohhuxw?e=r1wWIU)
+
 ![](model.png)
 
 ## **Configurações da biblioteca pandas_datareader**
