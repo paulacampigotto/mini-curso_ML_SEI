@@ -145,7 +145,7 @@ plt.ylabel('Preço de fechamento (R$)')
 plt.plot(treino['Close'], color = 'black')
 plt.plot(valido['Close'], color = 'green')
 plt.plot(valido['Predictions'], color = 'red')
-plt.legend(['Historico', 'Valor real', 'Predição'])
+plt.legend(['Histórico', 'Valor real', 'Predição'])
 plt.show()
 ```
 ## **Teste atual**
@@ -162,7 +162,7 @@ prediction = model.predict(x)
 prediction = normalizador.inverse_transform(prediction)
 real = dados_do_ativo.filter(['Close']).values[-1]
 
-print('pedição: ',prediction)
+print('predição: ',prediction)
 print('real: ',real)
 ```
 
