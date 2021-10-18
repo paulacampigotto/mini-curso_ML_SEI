@@ -11,9 +11,9 @@
 
 <!-- ## Links apresentação AWS
 - [Gravação da apresentação da AWS](https://www.youtube.com/watch?v=nnf6qLI0eV0)
-- [Slides AWS](slides_aws.pdf)
+- [Slides AWS](slides_aws.pdf) -->
 # **LSTM - Previsão de preços de ações**
-![](model.png) -->
+![](model.png)
 
 ## **Configurações da biblioteca pandas_datareader**
 
