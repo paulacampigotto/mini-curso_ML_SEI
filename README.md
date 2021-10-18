@@ -2,12 +2,12 @@
 
 ## Links mini curso ML
 
-- [Gravação do mini curso de ML](https://www.youtube.com/watch?v=-vC0C0zEVp4)
-- [Slides](slides_ml.pdf)
-- [Arquivo do Notebook](SEI_ML.ipynb)
-- [Artigos do CBIC sobre mercado financeiro](https://sbic.org.br/eventos/cbic_2021/#st04)
-- [Recomendação de curso sobre ML](https://www.coursera.org/learn/machine-learning/)
-- [Recomendação de livro sobre ML](https://www.amazon.com.br/M%C3%A3os-Obra-Aprendizado-Scikit-Learn-Inteligentes/dp/8550815489/ref=asc_df_8550815489/?tag=googleshopp00-20&linkCode=df0&hvadid=379715964603&hvpos=&hvnetw=g&hvrand=17329341288120638174&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9102333&hvtargid=pla-1390910077420&psc=1)
+- 🎬 [(Vídeo) Gravação do mini curso de ML](https://www.youtube.com/watch?v=-vC0C0zEVp4)
+- 📃 [Slides](slides_ml.pdf)
+- 💻 [Arquivo do Notebook](SEI_ML.ipynb)
+- 💰 [Artigos do CBIC sobre mercado financeiro](https://sbic.org.br/eventos/cbic_2021/#st04)
+- 🧑‍🏫 [Recomendação de curso sobre ML](https://www.coursera.org/learn/machine-learning/)
+- 📖 [Recomendação de livro sobre ML](https://www.amazon.com.br/M%C3%A3os-Obra-Aprendizado-Scikit-Learn-Inteligentes/dp/8550815489/ref=asc_df_8550815489/?tag=googleshopp00-20&linkCode=df0&hvadid=379715964603&hvpos=&hvnetw=g&hvrand=17329341288120638174&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9102333&hvtargid=pla-1390910077420&psc=1)
 
 <!-- ## Links apresentação AWS
 - [Gravação da apresentação da AWS](https://www.youtube.com/watch?v=nnf6qLI0eV0)
